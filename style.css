@@ -1,0 +1,28 @@
+head
+{
+    text-align: center;
+    margin:auto;
+}
+
+Body
+{
+    background-color: lightblue;
+}
+
+h1
+{
+    color: blue;
+    textalign: center;
+
+}
+
+aside
+{
+    margin-left: 46.5%
+}
+
+p
+{
+    font-family: Verdana;
+    Font-size: 20px;
+}
