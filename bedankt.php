@@ -8,10 +8,10 @@ echo "Met vriendelijke groet,";
 echo "<br><br>Team voor de punten";
 
 // use wordwrap() because lines are longer than 70 characters
-$msg = wordwrap("Bedankt voor het invullen ". $_POST['name']."\nWe zullen u binnenkort via". $_POST['email']."contacteren.\n\n Met vriendelijke groet,\nTeam voor de punten");
-
+$msg = wordwrap("Bedankt voor het invullen ". $_POST['name'].",\n\nWe zullen u binnenkort via ". $_POST['email']." contacteren.\n\nMet vriendelijke groet,\nTeam voor de punten");
+$headers = "From: l.blom1@students.uu.nl"
 // send email
-mail($_POST["email"],"Forms",$msg);
+mail($_POST["email"],$_POST["subject"],$msg,$headers);
 ?>
 </body>
 </html>
