@@ -4,6 +4,9 @@
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#home-page {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +24,21 @@ body {
     font-family: "Comic Neue", cursive;
 }
 
+#message-label {
+    display:inline-block;
+    margin-top: 16px;
+}
+
 .adventuretime {
    width: 100%;
-    height: 100%;
+   height: 100%;
+}
+
+#navigation-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 24px;
+    background-color: #f4f399;
+    width: 100vw;
 }
