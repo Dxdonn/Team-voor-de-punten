@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Pagina</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/677b73c60f.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
+  <main id="content">
+    <h1>Neem Contact Op!</h1>
+    <form action="bedankt.php" method="post">
+      <label for="name">Naam:</label><br>
+      <input type="text" id="name" name="name" value=" "><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email" value=" "><br>
+      <label for="subject">Onderwerp:</label><br>
+      <input type="text" id="subject" name="subject" value=" "><br>
+      <label for="Message" id="message-label">Bericht:</label>
+      <br>
+      <textarea id="Message"></textarea>
+      <br>
+      <input type="submit" value="verstuur">
+    </form>
+  </main>
+  <nav id="navigation-footer">
+    <a href="contact.html">Vind hier onze contactinformate</a> <br>
+    <i class="fa-solid fa-video"></i>
+    <a href="video-pagina.html">Dit is demo pagina 1</a> <br>
+    <a href="demo-page-2.html">Dit is demo pagina 2</a> <br>
+  </nav>
+</body>
 
-<h2>Forms</h2>
-
-<form action="bedankt.php" method="post">
-  <label for="name">Naam:</label>
-  <input type="text" id="name" name="name" value=" ">  
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email" value=" "><br><br>
-  <label for="subject">Onderwerp:</label>
-  <input type="text" id="subject" name="subject" value=" "><br>
-  <label for="Message">Bericht:</label>
-  <br>
-  <textarea id="Message"></textarea>
-	<br>
-  <input type="submit" value="verstuur">
-</form> 
-
-
-</body> 
 </html>
