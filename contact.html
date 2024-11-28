@@ -8,20 +8,22 @@
 </head>
 
 <body>
-  <h2>Forms</h2>
-  <form action="bedankt.php" method="post">
-    <label for="name">Naam:</label>
-    <input type="text" id="name" name="name" value=" ">
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" value=" "><br><br>
-    <label for="subject">Onderwerp:</label>
-    <input type="text" id="subject" name="subject" value=" "><br>
-    <label for="Message">Bericht:</label>
-    <br>
-    <textarea id="Message"></textarea>
-    <br>
-    <input type="submit" value="verstuur">
-  </form>
+  <main id="content">
+    <h1>Neem Contact Op!</h1>
+    <form action="bedankt.php" method="post">
+      <label for="name">Naam:</label><br>
+      <input type="text" id="name" name="name" value=" "><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email" value=" "><br>
+      <label for="subject">Onderwerp:</label><br>
+      <input type="text" id="subject" name="subject" value=" "><br>
+      <label for="Message" id="message-label">Bericht:</label>
+      <br>
+      <textarea id="Message"></textarea>
+      <br>
+      <input type="submit" value="verstuur">
+    </form>
+  </main>
 </body>
 
 </html>
