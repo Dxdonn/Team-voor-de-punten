@@ -12,6 +12,11 @@ $msg = wordwrap("Bedankt voor het invullen ". $_POST['name'].",\n\nWe zullen u b
 $headers = "From: l.blom1@students.uu.nl";
 // send email
 mail($_POST["email"],$_POST["subject"],$msg,$headers);
+
+fopen($_POST['name'] . ".txt","w");
+$txt = "Neem contact op met: ". $_POST['name'] . "op het mailadres: " . $_POST['mail'] . " \nHier volgt het ingestuurde bericht\n\n". $_POST['Message'];
+fwrite($_POST['name'] . ".txt", $txt);
+fclose($_POST['name'] . ".txt");
 ?>
 </body>
 </html>
