@@ -19,6 +19,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= $prefix ?>responsive/bootstrap.php">bootstrap demo</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= $prefix ?>responsive/responsive.php">responsive/breakpoints demo</a>
+      </li>
     </ul>
   </div>
 </nav>
