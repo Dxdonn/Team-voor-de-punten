@@ -1,0 +1,18 @@
+/* phone */
+body {
+    background-color: green;
+}
+
+/* tablet */
+@media screen and (min-width: 720px) {
+    body {
+        background-color: blue;
+    }
+}
+
+/* laptop/desktop */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: red;
+    }
+}
