@@ -9,6 +9,8 @@
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 #home-page {
@@ -16,6 +18,7 @@
     flex-direction: row;
     align-items: center;
     gap: 48px;
+    flex-wrap: wrap;
 }
 
 #sadge-img {
