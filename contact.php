@@ -2,10 +2,8 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8">
   <title>Contact Pagina</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/677b73c60f.js" crossorigin="anonymous"></script>
+  <?php require 'head.html'; ?>
 </head>
 
 <body>
@@ -25,12 +23,7 @@
       <input type="submit" value="verstuur">
     </form>
   </main>
-  <nav id="navigation-footer">
-    <a href="contact.html">Vind hier onze contactinformate</a> <br>
-    <i class="fa-solid fa-video"></i>
-    <a href="video-pagina.html">Dit is demo pagina 1</a> <br>
-    <a href="demo-page-2.html">Dit is demo pagina 2</a> <br>
-  </nav>
+  <?php require 'footer.html'; ?>
 </body>
 
 </html>

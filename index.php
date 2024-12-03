@@ -2,10 +2,8 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8">
   <title>HTML test</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/677b73c60f.js" crossorigin="anonymous"></script>
+  <?php require 'head.html'; ?>
 </head>
 
 <body>
@@ -24,12 +22,7 @@
       <img src="sadge.png" id="sadge-img" alt="an emoji with a tired face and bags under its eyes" />
     </div>
   </main>
-  <nav id="navigation-footer">
-    <a href="contact.html">Vind hier onze contactinformate</a> <br>
-    <i class="fa-solid fa-video"></i>
-    <a href="video-pagina.html">Dit is video pagina 1</a> <br>
-    <a href="demo-page-2.html">Dit is demo pagina 2</a> <br>
-  </nav>
+  <?php require 'footer.html'; ?>
 </body>
 
 </html>
