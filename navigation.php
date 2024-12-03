@@ -2,16 +2,22 @@
   <div class=" container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="<?= $prefix ?>contact.php">Vind hier onze contactinformatie</a>
+        <a class="nav-link" href="<?= $prefix ?>index.php">thuis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= $prefix ?>contact.php">contactinformatie</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?= $prefix ?>video-pagina.php">
           <i class="fa-solid fa-video"></i>
-          Dit is video pagina 1
+          video pagina
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= $prefix ?>demo-page-2.php">Dit is demo pagina 2</a>
+        <a class="nav-link" href="<?= $prefix ?>demo-page-2.php">demo pagina</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= $prefix ?>responsive/bootstrap.php">bootstrap demo</a>
       </li>
     </ul>
   </div>
