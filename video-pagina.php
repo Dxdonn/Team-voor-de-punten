@@ -3,10 +3,11 @@
 
 <head>
   <title>Een video</title>
-  <?php require 'head.html'; ?>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require 'navigation.php'; ?>
   <main id="content">
     <h1>Video-pagina</h1>
     <video class="adventuretime" controls autoplay muted>
@@ -14,7 +15,6 @@
       Browser requires javascript to autoplay without mute.
     </video>
   </main>
-  <?php require 'footer.html'; ?>
 </body>
 
 </html>

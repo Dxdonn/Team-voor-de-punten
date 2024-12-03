@@ -2,13 +2,12 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Pagina</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/677b73c60f.js" crossorigin="anonymous"></script>
+  <title>Bedankt Pagina</title>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require 'navigation.php'; ?>
   <main id="content">
     <?php
     echo "Bedankt voor het invullen " . $_POST['name'] . "!<br>";
@@ -28,12 +27,6 @@
     fclose($myfile);
     ?>
   </main>
-  <nav id="navigation-footer">
-    <a href="contact.html">Vind hier onze contactinformate</a> <br>
-    <i class="fa-solid fa-video"></i>
-    <a href="video-pagina.html">Dit is demo pagina 1</a> <br>
-    <a href="demo-page-2.html">Dit is demo pagina 2</a> <br>
-  </nav>
 </body>
 
 </html>

@@ -3,10 +3,11 @@
 
 <head>
   <title>HTML test</title>
-  <?php require 'head.html'; ?>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require 'navigation.php'; ?>
   <main id="content">
     <div id="home-page">
       <div id="text">
@@ -22,7 +23,6 @@
       <img src="sadge.png" id="sadge-img" alt="an emoji with a tired face and bags under its eyes" />
     </div>
   </main>
-  <?php require 'footer.html'; ?>
 </body>
 
 </html>

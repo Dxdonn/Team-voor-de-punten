@@ -3,11 +3,11 @@
 
 <head>
   <title>Demo pagina</title>
-  <?php require 'head.html'; ?>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
-  <?php require 'footer.html'; ?>
+  <?php require 'navigation.php'; ?>
 </body>
 
 </html>

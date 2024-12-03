@@ -3,10 +3,11 @@
 
 <head>
   <title>Contact Pagina</title>
-  <?php require 'head.html'; ?>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require 'navigation.php'; ?>
   <main id="content">
     <h1>Neem Contact Op!</h1>
     <form action="bedankt.php" method="post">
@@ -23,7 +24,6 @@
       <input type="submit" value="verstuur">
     </form>
   </main>
-  <?php require 'footer.html'; ?>
 </body>
 
 </html>
