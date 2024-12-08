@@ -20,7 +20,7 @@
           <li>Donn: Ik studeer liberal arts and sciences</li>
         </ul>
       </div>
-      <img src="sadge.png" id="sadge-img" alt="an emoji with a tired face and bags under its eyes" />
+      <img src="sadge.png" id="sadge-img" alt="an emoji with a tired face and bags under its eyes">
     </div>
   </main>
 </body>
