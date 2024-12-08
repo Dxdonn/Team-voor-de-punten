@@ -27,6 +27,6 @@ and (max-width :  1200px)
 and (min-width : 1200px)
 {
     body {
-        background-color: blue;
+        background-color: red;
     }
 }
