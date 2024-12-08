@@ -5,7 +5,7 @@
   <title>Bootstrap Demo Page</title>
   <?php
   $prefix = '../';
-  require $_SERVER['DOCUMENT_ROOT'] . '/head.php';
+  require dirname(dirname(__FILE__)) . '/head.php';
   ?>
   <link rel="stylesheet" href="responsive.css">
 </head>
@@ -13,7 +13,7 @@
 <body>
   <?php
   $prefix = '../';
-  require $_SERVER['DOCUMENT_ROOT'] . '/navigation.php';
+  require dirname(dirname(__FILE__)) . '/navigation.php';
   ?>
   <main id="content">
   </main>

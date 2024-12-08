@@ -2,17 +2,17 @@
 <html lang="nl">
 
 <head>
-  <title><?= $_SERVER['DOCUMENT_ROOT'] ?></title>
+  <title>Bootstrap Demo Page</title>
   <?php
   $prefix = '../';
-  require $_SERVER['DOCUMENT_ROOT'] . '/head.php';
+  require dirname(dirname(__FILE__)) . '/head.php';
   ?>
 </head>
 
 <body>
   <?php
   $prefix = '../';
-  require $_SERVER['DOCUMENT_ROOT'] . '/navigation.php';
+  require dirname(dirname(__FILE__)) . '/navigation.php';
   ?>
   <main id="content">
     <div class="mt-4 p-5 bg-primary rounded">
