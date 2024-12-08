@@ -3,18 +3,12 @@
 
 <head>
   <title>Bootstrap Demo Page</title>
-  <?php
-  $prefix = '../';
-  require dirname(dirname(__FILE__)) . '/head.php';
-  ?>
+  <?php require 'head.php'; ?>
   <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
-  <?php
-  $prefix = '../';
-  require dirname(dirname(__FILE__)) . '/navigation.php';
-  ?>
+  <?php require 'navigation.php'; ?>
   <main id="content">
   </main>
 </body>

@@ -17,10 +17,10 @@
         <a class="nav-link" href="<?= $prefix ?>demo-page-2.php">demo pagina</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= $prefix ?>responsive/bootstrap.php">bootstrap demo</a>
+        <a class="nav-link" href="<?= $prefix ?>bootstrap.php">bootstrap demo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= $prefix ?>responsive/responsive.php">responsive/breakpoints demo</a>
+        <a class="nav-link" href="<?= $prefix ?>responsive.php">breakpoints demo</a>
       </li>
     </ul>
   </div>

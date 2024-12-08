@@ -2,18 +2,12 @@
 <html lang="nl">
 
 <head>
-  <title><?= dirname(dirname(__FILE__)) . '/head.php' ?></title>
-  <?php
-  $prefix = '../';
-  require dirname(dirname(__FILE__)) . '/head.php';
-  ?>
+  <title>Bootstrap Demo Page</title>
+  <?php require 'head.php'; ?>
 </head>
 
 <body>
-  <?php
-  $prefix = '../';
-  require dirname(dirname(__FILE__)) . '/navigation.php';
-  ?>
+  <?php require 'navigation.php'; ?>
   <main id="content">
     <div class="mt-4 p-5 bg-primary rounded">
       <h1>Lorem ipsum odor amet,</h1>
