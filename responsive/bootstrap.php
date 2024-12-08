@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-  <title>Bootstrap Demo Page</title>
+  <title><?= $_SERVER['DOCUMENT_ROOT'] ?></title>
   <?php
   $prefix = '../';
   require $_SERVER['DOCUMENT_ROOT'] . '/head.php';
