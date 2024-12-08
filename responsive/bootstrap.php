@@ -5,14 +5,14 @@
   <title>Bootstrap Demo Page</title>
   <?php
   $prefix = '../';
-  require '../head.php';
+  require $_SERVER['DOCUMENT_ROOT'] . '/head.php';
   ?>
 </head>
 
 <body>
   <?php
   $prefix = '../';
-  require '../navigation.php';
+  require $_SERVER['DOCUMENT_ROOT'] . '/navigation.php';
   ?>
   <main id="content">
     <div class="mt-4 p-5 bg-primary rounded">
