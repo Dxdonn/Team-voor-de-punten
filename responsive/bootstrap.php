@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-  <title>Bootstrap Demo Page</title>
+  <title><?= dirname(dirname(__FILE__)) . '/head.php' ?></title>
   <?php
   $prefix = '../';
   require dirname(dirname(__FILE__)) . '/head.php';
