@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
+    <script src="main.js" defer></script>
+    <script src="product.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/677b73c60f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Webwinkel</title>
+  </head>
+
+  <body style="overflow: scroll" class="content">
+    <div>
+      <div id="top-part">
+        <!-- src comes from js -->
+        <img alt="" id="product-image" />
+        <section id="top-details">
+          <h3 id="product-author"></h3>
+          <h1 id="product-title"></h1>
+          <div id="small-details">
+            <p id="product-language"></p>
+            <p id="product-genres"></p>
+            <p id="product-publish-date"></p>
+            <p id="product-isbn"></p>
+          </div>
+          <div id="product-rating-stars"></div>
+          <p id="product-about"></p>
+          <button id="cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p id="product-price"></p>
+          </button>
+        </section>
+      </div>
+      <div id="bottom-part">
+        <section id="bottom-details">
+          <p id="author-about"></p>
+          <p id="product-info"></p>
+        </section>
+        <section id="recommendations"></section>
+      </div>
+      <section id="product-reviews"></section>
+    </div>
+  </body>
+</html>

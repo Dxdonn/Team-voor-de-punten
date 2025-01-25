@@ -1,67 +1,75 @@
-let carts = document.querySelectorAll(".add-cart");
+var carts = document.querySelectorAll(".add-cart");
+const cartIcon = document.querySelector(".cart span");
 
-let products = [
+var authors = [
   {
-    name: "Docent zonder haar",
-    tag: "docentzonderhaar",
-    price: 15,
-    inCart: 0,
-  },
-  {
-    name: "Docent met baard",
-    tag: "docentmetbaard",
-    price: 15,
-    inCart: 0,
-  },
-  {
-    name: "Docent met haar",
-    tag: "docentmethaar",
-    price: 15,
-    inCart: 0,
-  },
-  {
-    name: "Studiepunten",
-    tag: "studiepunten",
-    price: 100,
-    inCart: 0,
-  },
-  {
-    name: "Minnaert gebouw",
-    tag: "minnaertgebouw",
-    price: 40000,
-    inCart: 0,
-  },
-  {
-    name: "Academie gebouw",
-    tag: "academiegebouw",
-    price: 60000,
-    inCart: 0,
-  },
-  {
-    name: "Bachelor diploma",
-    tag: "bachelordiploma",
-    price: 10000,
-    inCart: 0,
-  },
-  {
-    name: "Docent met lang haar",
-    tag: "docentmetlanghaar",
-    price: 400,
-    inCart: 0,
+    name: "Emily Brontë",
+    about: `Emily Jane Brontë was an English novelist and poet who is best known for her only novel, Wuthering Heights, now considered a classic of English literature. She also published a book of poetry with her sisters Charlotte and Anne titled Poems by Currer, Ellis and Acton Bell with her own poems finding regard as poetic genius. Emily was the second-youngest of the four surviving Brontë siblings, between the youngest Anne and her brother Branwell. She published under the pen name Ellis Bell. `,
+    born: new Date("1818-07-30"),
+    died: new Date("1848-12-19"),
   },
 ];
 
+var products = [
+  {
+    image: "wuth.jpg",
+    title: "Wuthering Heights",
+    author: "Emily Brontë",
+    isbn: "0-486-29256-8",
+    language: "English",
+    genres: ["Gothic", "Tragedy"],
+    revision: 3,
+    publishCountry: "United Kingdom",
+    publishDate: new Date("1847-11-24"),
+    about: `\
+Wuthering Heights is a wild, passionate story of the intense and almost demonic love between Catherine Earnshaw and Heathcliff, a foundling adopted by Catherine's father. After Mr Earnshaw's death, Heathcliff is bullied and humiliated by Catherine's brother Hindley and wrongly believing that his love for Catherine is not reciprocated, leaves Wuthering Heights, only to return years later as a wealthy and polished man. He proceeds to exact a terrible revenge for his former miseries.
+
+The action of the story is chaotic and unremittingly violent, but the accomplished handling of a complex structure, the evocative descriptions of the lonely moorland setting and the poetic grandeur of vision combine to make this unique novel a masterpiece of English literature.`,
+    info: `\
+Wuthering Heights is the only novel by the English author Emily Brontë, initially published in 1847 under her pen name "Ellis Bell". It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with the Earnshaws' foster son, Heathcliff. The novel, influenced by Romanticism and Gothic fiction, is considered a classic of English literature.
+
+Wuthering Heights was accepted by publisher Thomas Newby along with Anne Brontë's Agnes Grey before the success of their sister Charlotte Brontë's novel Jane Eyre, but they were published later. After Emily's death, Charlotte edited a second edition of Wuthering Heights, which was published in 1850.
+
+Wuthering Heights is now widely considered to be one of the greatest novels ever written in English, but contemporaneous reviews were polarised. It was controversial for its depictions of mental and physical cruelty, including domestic abuse, and for its challenges to Victorian morality, religion, and the class system. It has inspired an array of adaptations across several media, including English singer-songwriter Kate Bush's song of the same name.`,
+    id: "1",
+    price: 15,
+    rating: 4,
+    inCart: 0,
+    reviews: [
+      {
+        username: "Jan",
+        rating: 4.3,
+        text: "Gorgeous cover. Look forward to reading. Have purchased many Wordsworth Classics.",
+      },
+      {
+        username: "Fientje",
+        rating: 5,
+        text: "That’s an extraordinary book",
+      },
+      {
+        username: "Klaas",
+        rating: 2,
+        text: "I don’t know who was in charge of creating the typeset to this but it’s awful.",
+      },
+    ],
+  },
+];
+
+function addToCart(product) {
+  cartNumbers(product);
+  totalCost(product);
+}
+
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
-    cartNumbers(products[i]);
-    totalCost(products[i]);
+    addToCart(products[i]);
   });
 }
 
 function onLoadCartNumbers() {
   let productNumbers = localStorage.getItem("cartNumbers");
   if (productNumbers) {
-    document.querySelector(".cart span").textContent = productNumbers;
+    if (cartIcon) cartIcon.textContent = productNumbers;
   }
 }
 
@@ -69,19 +77,16 @@ function cartNumbers(product, action) {
   let productNumbers = localStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
 
-  let cartItems = localStorage.getItem("productsInCart");
-  cartItems = JSON.parse(cartItems);
-
   if (action) {
     localStorage.setItem("cartNumbers", productNumbers - 1);
-    document.querySelector(".cart span").textContent = productNumbers - 1;
+    if (cartIcon) cartIcon.textContent = productNumbers - 1;
     console.log("action running");
   } else if (productNumbers) {
     localStorage.setItem("cartNumbers", productNumbers + 1);
-    document.querySelector(".cart span").textContent = productNumbers + 1;
+    if (cartIcon) cartIcon.textContent = productNumbers + 1;
   } else {
     localStorage.setItem("cartNumbers", 1);
-    document.querySelector(".cart span").textContent = 1;
+    if (cartIcon) cartIcon.textContent = 1;
   }
   setItems(product);
 }
@@ -90,20 +95,17 @@ function setItems(product) {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
 
-  if (cartItems != null) {
-    let currentProduct = product.tag;
+  if (cartItems !== null) {
+    let currentProduct = product.id;
 
-    if (cartItems[currentProduct] == undefined) {
-      cartItems = {
-        ...cartItems,
-        [currentProduct]: product,
-      };
+    if (!cartItems[currentProduct]) {
+      cartItems[currentProduct] = product;
     }
     cartItems[currentProduct].inCart += 1;
   } else {
     product.inCart = 1;
     cartItems = {
-      [product.tag]: product,
+      [product.id]: product,
     };
   }
 
@@ -139,7 +141,7 @@ function displayCart() {
     Object.values(cartItems).map((item, index) => {
       productContainer.innerHTML += `<div class="product"><ion-icon name="close-circle"></ion-icon>
 			
-				<img src="./images/${item.tag}.jpg" /><br><br>
+				<img src="./images/${item.image}" /><br><br>
                 <span class="sm-hide">${item.name}</span>
             </div>
             <div class="price sm-hide">&#8364; ${item.price},00</div>
@@ -253,3 +255,17 @@ function deleteButtons() {
 
 onLoadCartNumbers();
 displayCart();
+
+/**
+ *
+ * @param {string} id id of the html element
+ * @param {string} content What to set the field or innerText to
+ * @param {string} [field] The field to set. Defaults to innerText
+ */
+function setContent(id, content, field = "innerText") {
+  /**
+   * @type {HTMLElement}
+   */
+  const element = document.getElementById(id);
+  element[field] = content;
+}
