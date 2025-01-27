@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/fe0d0ef958.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="style.css" />
     <title>Webwinkel</title>
   </head>
 
   <body style="overflow: scroll; overflow-x: scroll" class="content">
     <header>
-      <div class="image">
-        <img src="images/logo.png" width="140px" height="140px" alt="" />
+
+      <div class="icon-bar">
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-regular fa-comment"></i></a>
+        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href ="index.html"><img class = "ownlogoimg"></a>
+        <input type="text" placeholder="Search..">
       </div>
-      <div class="overlay"></div>
     </header>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="produkten.html">Produkten</a></li>
-        <li><a href="overons.html">Over ons</a></li>
-        <li class="cart">
-          <a href="cart.html"
-            ><ion-icon name="basket"></ion-icon>Winkelwagen<span>0</span></a
-          >
-        </li>
-      </ul>
-    </nav>
+
 
     <div class="container">
       <div class="image">
         <h1>IUW-OK</h1>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.".
+          <div class="container">
+            <h3>Best sellers</h3>
+            <div class="carousel-view">
+              <!-- Left Button -->
+              <button id="prev-btn" class="prev-btn"> </button>
+
+                <!-- List Container -->
+                  <div id="item-list" class="item-list">
+                  
+                      <!-- Items -->
+                     <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                      <img id="item" class="item" src="images/uu.png"/>
+                  </div>
+              
+              <!-- Right Button -->
+                  <button id="next-btn" class="next-btn"> </button>
+              </div>
+            </div>
+            <div class="container">
+              <h2>XXXX</h2>
+              <div class="carousel-view">
+                <!-- Left Button -->
+                <button id="prev-btn" class="prev-btn"> </button>
+  
+                  <!-- List Container -->
+                    <div id="item-list" class="item-list">
+                    
+                        <!-- Items -->
+                       <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                        <img id="item" class="item" src="images/uu.png"/>
+                    </div>
+                
+                <!-- Right Button -->
+                    <button id="next-btn" class="next-btn"> </button>
+                </div>
+              </div>
+            
         </p>
         <br />
         <img
@@ -63,8 +104,18 @@
           ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?"
         </p>
-        <footer style="text-align: center; position: relative; top: 20px">
-          Copyright © 2024 IUW Enterprises<br /><br />
+        <footer 
+        
+        <div class="icon-bar">
+          <a href ="#"><img  <br />
+            <img
+              style="display: block; margin-left: auto; margin-right: auto"
+              src="images/Trustpilot.png"
+              width="300"
+              height="200"
+            /><br />></a>
+          <a href ="#"><img class = "betaal"></a>
+        </div>
         </footer>
       </div>
     </div>
