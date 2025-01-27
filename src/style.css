@@ -16,13 +16,6 @@
   padding: 0;
 }
 
-h3 {
-  font-family: Cambria;
-  margin-bottom: 0;
-  margin-top: 0;
-  line-height: 25px;
-}
-
 .content {
   max-width: 1000px;
   margin: auto;
@@ -257,4 +250,16 @@ li a {
   .basketTotalContainer {
     padding-right: 8%;
   }
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }
