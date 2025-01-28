@@ -110,11 +110,16 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     isbn: "0-486-26431-X",
     language: "English",
     genres: ["Romance", "Satire"],
-    revision: 5,
+    revision: 2,
     publishCountry: "United Kingdom",
     publishDate: new Date("1813-01-28"),
-    about:
-      "Pride and Prejudice follows Elizabeth Bennet as she navigates issues of manners, upbringing, morality, and marriage in early 19th-century England. The novel critiques the societal expectations of the time while delivering a witty and romantic story.",
+    about: `\
+Finally, you can have an edition of The Peacock Edition' of 'Pride and Prejudice' by Jane Austen, edition of 1894, with the original text, original illustrations, respecting the layout and the font. Even the book has the same number of pages, 476 plus 29 pages including preface. The binding has also been reproduced, based on original covers, scanned at the highest resolution, which are worn, just like the books that are on sale today, but with their price multiplied by thousands.
+
+Great definition in the images, with a restoration treatment of the illustrations, including more than 70 large sizes and another 60 capital letters.
+
+Set in England in the early 19th century, Pride and Prejudice tells the story of Mr and Mrs Bennet's five unmarried daughters after the rich and eligible Mr Bingley and his status-conscious friend, Mr Darcy, have moved into their neighbourhood.
+`,
     info: "Jane Austen's beloved novel explores themes of love, reputation, and class. It is one of the most famous works in English literature and has been adapted multiple times for film and television.",
     id: "2",
     price: 12,
@@ -140,8 +145,10 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 4,
     publishCountry: "United Kingdom",
     publishDate: new Date("1949-06-08"),
-    about:
-      "1984 is a dystopian novel set in a totalitarian society where the government, led by Big Brother, exerts extreme control over its citizens. It explores themes of surveillance, truth, and individuality.",
+    about: `\
+Orwell's classic in a special hardcover edition with silver foil embossing.
+
+London, 1984: Winston Smith, a history falsifier at the Ministry of Truth, falls in love with the beautiful and mysterious Julia. Together they begin to question the totalitarian world in which they have functioned until now. George Orwell's vision of a totalitarian state, in which cyber surveillance, historical revisionism and the Thought Police determine the lives of transparent citizens, has only become more urgent to this day. `,
     info: "One of the most influential novels of the 20th century, 1984 warns about the dangers of totalitarianism. Orwell's vision remains relevant in discussions about privacy and government control.",
     id: "3",
     price: 14,
@@ -171,8 +178,11 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 3,
     publishCountry: "United States",
     publishDate: new Date("1960-07-11"),
-    about:
-      "The novel follows young Scout Finch in the racially charged Deep South, as her father, lawyer Atticus Finch, defends a Black man accused of raping a white woman.",
+    about: `\
+Harper Lee's Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred.
+
+One of the most cherished stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than forty million copies worldwide, served as the basis for an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father—a crusading local lawyer—risks everything to defend a black man unjustly accused of a terrible crime.
+`,
     info: "Harper Lee's only novel for decades, To Kill a Mockingbird remains a powerful critique of racial injustice in America. It won the Pulitzer Prize in 1961.",
     id: "4",
     price: 16,
@@ -202,8 +212,8 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 4,
     publishCountry: "United States",
     publishDate: new Date("1925-04-10"),
-    about:
-      "The Great Gatsby tells the story of the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan during the Roaring Twenties.",
+    about: `\
+A new edition of the original 1925 edition of F. Scott Fitzgerald's classic Great American novel, beautifully illustrated by award-winning artist Adam Simpson. Widely considered to be the greatest American novel of all time, The Great Gatsby is the story of the wealthy, quixotic Jay Gatsby and his obsessive love for debutante Daisy Buchanan. It is also a cautionary tale of the American Dream in all its exuberance, decadence, hedonism, and passion. First published in 1925 by Charles Scribner's Sons, The Great Gatsby sold modestly and received mixed reviews from literary critics of the time. Upon his death in 1940, Fitzgerald believed the book to be a failure, but a year later, as the U.S. was in the grips of the Second World War, an initiative known as Council on Books in Wartime was created to distribute paperbacks to soldiers abroad. The Great Gatsby became one of the most popular books provided to regiments, with more than 100,000 copies shipped to soldiers overseas. By 1960, the book was selling apace and being incorporated into classrooms across the nation. Today, it has sold over 25 million copies worldwide in 42 languages. This exquisitely rendered edition of the original 1925 printing reintroduces readers to Fitzgerald's iconic portrait of the Jazz Age, complete with specially commissioned illustrations by Adam Simpson that reflect the gilded splendor of the Roaring Twenties. `,
     info: "A critique of the American Dream, Fitzgerald’s masterpiece is widely considered one of the greatest American novels.",
     id: "5",
     price: 13,
@@ -233,8 +243,9 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 3,
     publishCountry: "United Kingdom",
     publishDate: new Date("1818-01-01"),
-    about:
-      "A scientist creates life but is horrified by his own creation, leading to tragic consequences.",
+    about: `\
+Frankenstein is the classic gothic horror novel which has thrilled and engrossed readers for two centuries. Written by Mary Shelley, it is a story which she intended would 'curdle the blood and quicken the beatings of the heart.' The tale is a superb blend of science fiction, mystery and thriller. Victor Frankenstein driven by the mad dream of creating his own creature, experiments with alchemy and science to build a monster stitched together from dead remains. Once the creature becomes a living breathing articulate entity, it turns on its maker and the novel darkens into tragedy. The reader is very quickly swept along by the force of the elegant prose, the grotesque, surreal imagery, and the multi-layered themes in the novel. Although first published in 1818, Shelley's masterpiece still maintains a strong grip on the imagination and has been the inspiration for numerous horror movies, television and stage adaptations.
+`,
     info: "One of the earliest examples of science fiction, Mary Shelley's Frankenstein explores themes of ambition, responsibility, and humanity.",
     id: "6",
     price: 11,
@@ -264,8 +275,9 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 4,
     publishCountry: "United Kingdom",
     publishDate: new Date("1932-08-18"),
-    about:
-      "A futuristic world where society is engineered for stability at the cost of individuality and true emotion.",
+    about: `\
+Far in the future, the World Controllers have created the ideal society. Through clever use of genetic engineering, brainwashing and recreational sex and drugs all its members are happy consumers. Bernard Marx seems alone in feeling discontent. Harbouring an unnatural desire for solitude, and a perverse distaste for the pleasures of compulsory promiscuity, Bernard has an ill-defined longing to break free. A visit to one of the few remaining Savage Reservations where the old, imperfect life still continues, may be the cure for his distress-Huxley's ingenious fantasy of the future sheds a blazing light on the present and is considered to be his most enduring masterpiece. 
+`,
     info: "Brave New World remains a thought-provoking dystopian novel that examines the dangers of technological and governmental control.",
     id: "7",
     price: 14,
@@ -291,8 +303,13 @@ Wuthering Heights is now widely considered to be one of the greatest novels ever
     revision: 3,
     publishCountry: "United States",
     publishDate: new Date("1851-11-14"),
-    about:
-      "The epic tale of Captain Ahab’s obsessive quest to hunt the white whale, Moby Dick.",
+    about: `\
+Journey to the heart of the sea with this larger-than-life classic.
+
+Regarded as the Great American Novel, Moby Dick is the ultimate tale of seeking vengeance.
+
+Narrated by the crew member Ishmael, this epic whaling adventure follows the crew of the Pequod, as its captain, Ahab, descends deeper and deeper into madness on his quest to find and kill the white whale that maimed him. Beyond the surface--of ship life, whaling, and the hunt for the elusive Moby Dick--are allegorical references to life, and even the universe, in this masterpiece by Herman Melville. 
+`,
     info: "Initially a commercial failure, Moby-Dick is now hailed as one of the greatest American novels.",
     id: "8",
     price: 17,
