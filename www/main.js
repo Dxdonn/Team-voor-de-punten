@@ -549,3 +549,66 @@ function setContents(classname, content, field = "innerText") {
   const elements = document.getElementsByClassName(classname);
   for (const element of elements) element[field] = content;
 }
+
+const ratingStartHtml = /*HTML*/ `\
+<i class="fa-solid fa-star product-rating-star-coloured"></i>
+`;
+const notRatingStarHtml = /*HTML*/ `\
+<i class="fa-solid fa-star product-rating-star-gray"></i>
+`;
+
+/**
+ * @param {number} rating
+ * @returns {string}
+ */
+function ratingStarsTemplate(rating) {
+  return (
+    ratingStartHtml.repeat(Math.round(rating)) +
+    notRatingStarHtml.repeat(5 - Math.round(rating))
+  );
+}
+
+/**
+ * @param {string} id
+ * @param {string} image
+ * @param {string} title
+ * @param {string} author
+ * @param {number} rating
+ * @param {number} price
+ * @returns
+ */
+function recommendationHtmlTemplate(id, image, title, author, rating, price) {
+  return /*HTML*/ `\
+<div id="recommendation-${id}">
+  <img class="recommendation-image" src="images/${image}"/>
+  <div class="recommendation-details">
+    <a href="product.html?id=${id}">
+      <b class="recommendation-title">${title}</b>
+      <p class="recommendation-author">${author}</p>
+    </a>
+    <div class="recommendation-rating-stars mt-5">${ratingStarsTemplate(
+      rating
+    )}</div>
+    <button class="recommendation-cart-button">
+      <span class="recommendation-price">
+        <i class="fa-solid fa-cart-shopping"></i>
+        ${displayPrice(price)}
+      </span>
+    </button>
+  </div>
+</div>
+`;
+}
+
+/**
+ * @param {number} price
+ * @returns {string}
+ */
+function displayPrice(price) {
+  return price.toLocaleString("en-gb", {
+    currency: "eur",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    style: "currency",
+  });
+}

@@ -26,14 +26,6 @@
   }
 }
 
-.product-rating-star-coloured {
-  color: #ffd43b;
-}
-
-.product-rating-star-gray {
-  color: gray;
-}
-
 #cart-button {
   display: flex;
   gap: 15px;
@@ -73,31 +65,6 @@
 }
 
 #recommendations {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   width: 50%;
   padding-left: 100px;
-  > div {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    img {
-      max-height: 100%;
-      width: 150px;
-      object-fit: contain;
-      margin-right: 10px;
-    }
-    .recommendation-details {
-      flex-grow: 1;
-    }
-    .recommendation-cart-button {
-      margin-top: 10px;
-      display: flex;
-      margin-left: auto;
-      gap: 5px;
-      padding: 3px 5px;
-    }
-  }
 }

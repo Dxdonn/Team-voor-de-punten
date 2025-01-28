@@ -12,29 +12,38 @@ products.forEach((pr) => pr.genres.forEach((gen) => genres.add(gen)));
 const languages = new Set();
 products.forEach((pr) => languages.add(pr.language));
 
-let maxPrice = 0;
+let maxProductPrice = 0;
+let minProductPrice = Number.POSITIVE_INFINITY;
 products.forEach((pr) => {
-  maxPrice = Math.max(maxPrice, pr.price);
+  minProductPrice = Math.min(minProductPrice, pr.price);
+  maxProductPrice = Math.max(maxProductPrice, pr.price);
 });
+
+const sorting = query.get("sorting") ?? "rating";
+const maxPrice = query.get("max-price") ?? maxProductPrice;
+const minRating = query.get("min-rating") ?? 0;
+const genre = query.get("genre");
+const language = query.get("language");
 
 /**
  * @type {HTMLSelectElement}
  */
 const sortDropdown = document.getElementById("sort-dropdown");
-sortDropdown.value = query.get("sorting") ?? "rating";
+sortDropdown.value = sorting;
 
 /**
  * @type {HTMLInputElement}
  */
 const priceSlider = document.getElementById("price-slider");
-priceSlider.max = maxPrice;
-priceSlider.value = query.get("max-price") ?? maxPrice;
+priceSlider.min = minProductPrice;
+priceSlider.max = maxProductPrice;
+priceSlider.value = maxPrice;
 
 /**
  * @type {HTMLInputElement}
  */
 const ratingSlider = document.getElementById("rating-slider");
-ratingSlider.value = query.get("min-rating") ?? 0;
+ratingSlider.value = minRating;
 
 const getChecked = (name, queryParam) =>
   query.get(queryParam) === name ? "checked" : "";
@@ -83,3 +92,37 @@ resetButton.onclick = () => {
   const params = search ? new URLSearchParams({ search }) : "";
   window.location.href = `${window.location.pathname}?${params}`;
 };
+
+const filteredResults = products.filter(
+  (pr) =>
+    ((genre && pr.genres.includes(genre)) || !genre) &&
+    ((language && pr.language === language) || !language) &&
+    Math.round(pr.rating) >= Number(minRating) &&
+    pr.price <= Number(maxPrice)
+);
+
+switch (sorting) {
+  case "price-lh":
+    filteredResults.sort((a, b) => a.price - b.price);
+    break;
+  case "price-hl":
+    filteredResults.sort((a, b) => b.price - a.price);
+    break;
+  default:
+    filteredResults.sort((a, b) => b.rating - a.rating);
+}
+
+const resultsHtml = filteredResults
+  .map((pr) =>
+    recommendationHtmlTemplate(
+      pr.id,
+      pr.image,
+      pr.title,
+      pr.author,
+      pr.rating,
+      pr.price
+    )
+  )
+  .join("\n");
+
+setContent("results", resultsHtml, "innerHTML");
