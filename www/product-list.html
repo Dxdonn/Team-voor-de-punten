@@ -22,9 +22,9 @@
           <div id="filter-sort" class="mb-10">
             <label for="sort-dropdown">Sort</label>
             <select name="sorting" id="sort-dropdown">
+              <option value="rating">Rating</option>
               <option value="price-lh">Price Lowest -> Highest</option>
               <option value="price-hl">Price Highest -> Lowest</option>
-              <option value="rating">Rating</option>
             </select>
           </div>
           <label for="filter-genre">Genre:</label>
@@ -47,7 +47,8 @@
             <!-- max & value come from css -->
             <input type="range" min="1" id="price-slider" name="max-price" />
           </div>
-          <button type="submit">Filter</button>
+          <button type="submit" id="submit-button">Filter</button>
+          <button type="button" id="reset-button">Reset</button>
         </form>
       </section>
       <section id="list"></section>

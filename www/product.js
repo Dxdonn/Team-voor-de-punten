@@ -29,10 +29,10 @@ cartButton.onclick = () => {
   addToCart(product);
 };
 
-const ratingStartHtml = `\
+const ratingStartHtml = /*HTML*/ `\
 <i class="fa-solid fa-star product-rating-star-coloured"></i>
 `;
-const notRatingStarHtml = `\
+const notRatingStarHtml = /*HTML*/ `\
 <i class="fa-solid fa-star product-rating-star-gray"></i>
 `;
 
@@ -46,7 +46,7 @@ setContent(
   "innerHTML"
 );
 
-const reviewHtmlTemplate = (id, username, ratingStars, text) => `\
+const reviewHtmlTemplate = (id, username, ratingStars, text) => /*HTML*/ `\
 <div id="review-${id}" class="mb-10">
   <b class="review-username">${username}</b>
   <div class="review-rating-stars mb-5">${ratingStars}</div>
@@ -74,7 +74,7 @@ const recommendationHtmlTemplate = (
   author,
   ratingStars,
   price
-) => `\
+) => /*HTML*/ `\
 <div id="recommendation-${id}">
   <img class="recommendation-image" src="images/${image}"/>
   <div class="recommendation-details">
