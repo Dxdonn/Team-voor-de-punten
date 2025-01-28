@@ -24,6 +24,7 @@ const maxPrice = query.get("max-price") ?? maxProductPrice;
 const minRating = query.get("min-rating") ?? 0;
 const genre = query.get("genre");
 const language = query.get("language");
+const search = query.get("search");
 
 /**
  * @type {HTMLSelectElement}
@@ -88,15 +89,32 @@ setContent("filter-language", languageHtml, "innerHTML");
 const resetButton = document.getElementById("reset-button");
 resetButton.onclick = () => {
   // when you click on reset, we want to reset all filters, except for the search filter
-  const search = query.get("search");
   const params = search ? new URLSearchParams({ search }) : "";
   window.location.href = `${window.location.pathname}?${params}`;
 };
+
+/**
+ * @param {string} toMatch
+ * @param {string} term
+ * @param {string} ratio
+ * @returns
+ */
+function fuzzy(toMatch, term, ratio) {
+  const lowerCase = toMatch.toLowerCase();
+  const compare = term.toLowerCase();
+  let matches = 0;
+  if (lowerCase.indexOf(compare) > -1) return true; // covers basic partial matches
+  for (const letter of compare) {
+    lowerCase.indexOf(letter) > -1 ? (matches += 1) : (matches -= 1);
+  }
+  return matches / this.length >= ratio || term == "";
+}
 
 const filteredResults = products.filter(
   (pr) =>
     ((genre && pr.genres.includes(genre)) || !genre) &&
     ((language && pr.language === language) || !language) &&
+    ((search && fuzzy(pr.title, search, 0.6)) || !search) &&
     Math.round(pr.rating) >= Number(minRating) &&
     pr.price <= Number(maxPrice)
 );
