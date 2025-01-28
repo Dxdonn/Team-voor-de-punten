@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product-list.css" />
+    <script src="main.js" defer></script>
+    <script src="product-list.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/677b73c60f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Webwinkel</title>
+  </head>
+
+  <body style="overflow: scroll" class="content">
+    <div id="page">
+      <section id="filters">
+        <form action="product-list.html">
+          <div id="filter-sort" class="mb-10">
+            <label for="sort-dropdown">Sort</label>
+            <select name="sorting" id="sort-dropdown">
+              <option value="price-lh">Price Lowest -> Highest</option>
+              <option value="price-hl">Price Highest -> Lowest</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+          <label for="filter-genre">Genre:</label>
+          <div id="filter-genre" class="mb-10"></div>
+          <label for="filter-language">Language:</label>
+          <div id="filter-language" class="mb-10"></div>
+          <div id="filter-rating" class="mb-10">
+            <label for="rating-slider">Minimum Rating</label>
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="1"
+              id="rating-slider"
+              name="min-rating"
+            />
+          </div>
+          <div id="filter-price" class="mb-10">
+            <label for="price-slider">Maximum Price</label>
+            <!-- max & value come from css -->
+            <input type="range" min="1" id="price-slider" name="max-price" />
+          </div>
+          <button type="submit">Filter</button>
+        </form>
+      </section>
+      <section id="list"></section>
+    </div>
+  </body>
+</html>
