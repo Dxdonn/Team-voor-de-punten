@@ -76,7 +76,6 @@ const recommendationHtmlTemplate = (
   price
 ) => `\
 <div id="recommendation-${id}">
-<a href="product.html?id=${id}">
   <img class="recommendation-image" src="images/${image}"/>
   <div class="recommendation-details">
     <a href="product.html?id=${id}">
