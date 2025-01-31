@@ -413,7 +413,7 @@ li a {
   gap: 70px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
 
@@ -437,6 +437,10 @@ li a {
   height: 160px;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
+}
+
+.Asize {
+  height: 65px;
 }
 
 #footer {
