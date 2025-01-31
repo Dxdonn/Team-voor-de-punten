@@ -352,7 +352,6 @@ function cartNumbers(product, action) {
   if (action) {
     localStorage.setItem("cartNumbers", productNumbers - 1);
     if (cartIcon) cartIcon.textContent = productNumbers - 1;
-    console.log("action running");
   } else if (productNumbers) {
     localStorage.setItem("cartNumbers", productNumbers + 1);
     if (cartIcon) cartIcon.textContent = productNumbers + 1;
@@ -411,18 +410,23 @@ function displayCart() {
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
     Object.values(cartItems).map((item, index) => {
-      productContainer.innerHTML += `<div class="product"><ion-icon name="close-circle"></ion-icon>
-			
-				<img src="./images/${item.image}" /><br><br>
-                <span class="sm-hide">${item.name}</span>
-            </div>
-            <div class="price sm-hide">&#8364; ${item.price},00</div>
-            <div class="quantity">
-                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    <span>${item.inCart}</span>
-                <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
-            </div>
-            <div class="total">&#8364; ${item.inCart * item.price},00</div>`;
+      productContainer.innerHTML += /*html*/ `
+<div class="product">
+  <ion-icon name="close-circle" data-id="${item.id}"></ion-icon>
+    <img src="./images/${item.image}" /><br /><br />
+    <span class="sm-hide">${item.title}</span>
+</div>
+<div class="price sm-hide">&#8364; ${item.price},00</div>
+  <div class="quantity">
+    <ion-icon class="decrease" name="arrow-dropleft-circle" data-id="${
+      item.id
+    }"></ion-icon>
+    <span>${item.inCart}</span>
+    <ion-icon class="increase" name="arrow-dropright-circle" data-id="${
+      item.id
+    }"></ion-icon>
+</div>
+<div class="total">&#8364; ${item.inCart * item.price},00</div>`;
     });
 
     productContainer.innerHTML += `
@@ -446,18 +450,9 @@ function manageQuantity() {
 
   for (let i = 0; i < increaseButtons.length; i++) {
     decreaseButtons[i].addEventListener("click", () => {
-      console.log(cartItems);
       currentQuantity =
         decreaseButtons[i].parentElement.querySelector("span").textContent;
-      console.log(currentQuantity);
-      currentProduct = decreaseButtons[
-        i
-      ].parentElement.previousElementSibling.previousElementSibling
-        .querySelector("span")
-        .textContent.toLocaleLowerCase()
-        .replace(/ /g, "")
-        .trim();
-      console.log(currentProduct);
+      currentProduct = decreaseButtons[i].dataset.id;
 
       if (cartItems[currentProduct].inCart > 1) {
         cartItems[currentProduct].inCart -= 1;
@@ -469,18 +464,9 @@ function manageQuantity() {
     });
 
     increaseButtons[i].addEventListener("click", () => {
-      console.log(cartItems);
       currentQuantity =
         increaseButtons[i].parentElement.querySelector("span").textContent;
-      console.log(currentQuantity);
-      currentProduct = increaseButtons[
-        i
-      ].parentElement.previousElementSibling.previousElementSibling
-        .querySelector("span")
-        .textContent.toLocaleLowerCase()
-        .replace(/ /g, "")
-        .trim();
-      console.log(currentProduct);
+      currentProduct = increaseButtons[i].dataset.id;
 
       cartItems[currentProduct].inCart += 1;
       cartNumbers(cartItems[currentProduct]);
@@ -497,26 +483,21 @@ function deleteButtons() {
   let cartCost = localStorage.getItem("totalCost");
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let productName;
-  console.log(cartItems);
+  let productId;
 
   for (let i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener("click", () => {
-      productName = deleteButtons[i].parentElement.textContent
-        .toLocaleLowerCase()
-        .replace(/ /g, "")
-        .trim();
-
+      productId = deleteButtons[i].dataset.id;
       localStorage.setItem(
         "cartNumbers",
-        productNumbers - cartItems[productName].inCart
+        productNumbers - cartItems[productId].inCart
       );
       localStorage.setItem(
         "totalCost",
-        cartCost - cartItems[productName].price * cartItems[productName].inCart
+        cartCost - cartItems[productId].price * cartItems[productId].inCart
       );
 
-      delete cartItems[productName];
+      delete cartItems[productId];
       localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 
       displayCart();
