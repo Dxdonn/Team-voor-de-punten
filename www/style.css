@@ -325,7 +325,7 @@ li a {
   float: right;
   text-align: center;
   width: 10%;
-  padding: 12px ;
+  padding: 12px;
   color: black;
   font-size: 20px;
   margin-right: auto;
@@ -345,13 +345,11 @@ li a {
   float: right;
   text-align: center;
   width: 10%;
-  padding: 12px ;
+  padding: 12px;
   color: black;
   font-size: 20px;
   margin-right: auto;
 }
-
-
 
 .ownlogoimg {
   content: url("images/INKSwit.png");
@@ -361,11 +359,10 @@ li a {
   content: url("images/Betaalmethoden.png");
   width: 300%;
   position: static;
-
 }
 
 .flexbox {
-  display:flex;
+  display: flex;
 }
 
 /* Style the search box inside the navigation bar */
@@ -449,4 +446,8 @@ li a {
 #page {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.header-icon {
+  color: white;
 }
