@@ -26,18 +26,6 @@
   }
 }
 
-#product-rating-stars {
-  margin-bottom: 20px;
-}
-
-.product-rating-star-coloured {
-  color: #ffd43b;
-}
-
-.product-rating-star-gray {
-  color: gray;
-}
-
 #cart-button {
   display: flex;
   gap: 15px;
@@ -61,4 +49,22 @@
   min-width: 200px;
   max-height: 1000px;
   padding: 0 25px;
+}
+
+#bottom-details {
+  width: 50%;
+}
+
+#product-reviews {
+  > div {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: azure;
+  }
+}
+
+#recommendations {
+  width: 50%;
+  padding-left: 100px;
 }

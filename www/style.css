@@ -16,13 +16,6 @@
   padding: 0;
 }
 
-h3 {
-  font-family: Cambria;
-  margin-bottom: 0;
-  margin-top: 0;
-  line-height: 25px;
-}
-
 .content {
   max-width: 1000px;
   margin: auto;
@@ -259,42 +252,105 @@ li a {
   }
 }
 
+.product-rating-star-coloured {
+  color: #ffd43b;
+}
+
+.product-rating-star-gray {
+  color: gray;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  > div {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    img {
+      max-height: 100%;
+      width: 150px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+    .recommendation-details {
+      flex-grow: 1;
+    }
+    .recommendation-cart-button {
+      margin-top: 10px;
+      display: flex;
+      margin-left: auto;
+      gap: 5px;
+      padding: 3px 5px;
+    }
+  }
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ph-10 {
+  padding: 0 10px;
+}
+
+.ph-20 {
+  padding: 0 10px;
+}
 /* MENU BAR */
 .icon-bar {
-  width: 100%; 
-  background-color: #555; 
-  overflow: auto; 
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
 }
 
 .icon-bar a {
-  float: left; 
-  text-align: center; 
-  width: 10%; 
-  padding: 12px 0; 
-  color: black; 
-  font-size: 20px; 
+  float: left;
+  text-align: center;
+  width: 10%;
+  padding: 12px 0;
+  color: black;
+  font-size: 20px;
 }
 
 .icon-bar a:hover {
-  background-color: #000; 
+  background-color: #000;
 }
 
-.ownlogoimg{
-  content:url("images/INKSwit.png");
+.ownlogoimg {
+  content: url("images/INKSwit.png");
   width: 45%;
 }
-.betaal{
-  content:url("images/Betaalmethoden.png");
-  width:300%;
-  float:relative;
+.betaal {
+  content: url("images/Betaalmethoden.png");
+  width: 300%;
+  float: relative;
 }
-.trustpilot{
-  content:url("images/Trustpilot.png");
+.trustpilot {
+  content: url("images/Trustpilot.png");
   width: 200%;
   float: left;
 }
 /* Style the search box inside the navigation bar */
-.icon-bar input[type=text] {
+.icon-bar input[type="text"] {
   float: right;
   padding: 12spx;
   border: none;
@@ -303,16 +359,16 @@ li a {
   font-size: 18px;
 }
 
-  .icon-bar input[type=text] {
-    border: 1px solid #ccc;
-  }
+.icon-bar input[type="text"] {
+  border: 1px solid #ccc;
+}
 
-  button{
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: none;
-    transition: all .3s ease-in-out;
+button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -347,7 +403,6 @@ li a {
   scroll-snap-type: x mandatory;
 }
 
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .item-list::-webkit-scrollbar {
   display: none;
@@ -367,6 +422,5 @@ li a {
   min-width: 120px;
   height: 120px;
   background-color: rgb(255, 255, 255);
-  border-radius:8px;
+  border-radius: 8px;
 }
-
