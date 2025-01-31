@@ -19,12 +19,12 @@ products.forEach((pr) => {
   maxProductPrice = Math.max(maxProductPrice, pr.price);
 });
 
-const sorting = query.get("sorting") ?? "rating";
 const maxPrice = query.get("max-price") ?? maxProductPrice;
 const minRating = query.get("min-rating") ?? 0;
 const genre = query.get("genre");
 const language = query.get("language");
 const search = query.get("search");
+const sorting = query.get("sorting") ?? (search ? "search" : "rating");
 
 /**
  * @type {HTMLSelectElement}
@@ -54,6 +54,7 @@ const genreHtmlTemplate = (genreName) => /*HTML*/ `\
   type="radio" 
   id="genre-${genreName}" 
   name="genre" 
+  class="genre-radio"
   value="${genreName}" 
   ${getChecked(genreName, "genre")}
 >
@@ -71,6 +72,7 @@ const languageHtmlTemplate = (language) => /*HTML*/ `\
   type="radio" 
   id="language-${language}" 
   name="language" 
+  class="language-radio"
   value="${language}"
   ${getChecked(language, "language")}
 >
@@ -93,6 +95,12 @@ resetButton.onclick = () => {
   window.location.href = `${window.location.pathname}?${params}`;
 };
 
+const hiddenSearchbar = document.getElementById("hidden-search");
+hiddenSearchbar.value = search;
+searchbar.addEventListener("keydown", () => {
+  hiddenSearchbar.value = searchbar.value;
+});
+
 /**
  * @param {string} toMatch
  * @param {string} term
@@ -107,7 +115,9 @@ function fuzzy(toMatch, term, ratio) {
   for (const letter of compare) {
     lowerCase.indexOf(letter) > -1 ? (matches += 1) : (matches -= 1);
   }
-  return matches / this.length >= ratio || term == "";
+  let score = matches / this.length;
+  if (score < ratio && term !== "") return null;
+  return score;
 }
 
 const filteredResults = products.filter(
@@ -119,15 +129,22 @@ const filteredResults = products.filter(
     pr.price <= Number(maxPrice)
 );
 
-switch (sorting) {
+switch (query.get("sorting")) {
   case "price-lh":
     filteredResults.sort((a, b) => a.price - b.price);
     break;
   case "price-hl":
     filteredResults.sort((a, b) => b.price - a.price);
     break;
-  default:
+  case "rating":
     filteredResults.sort((a, b) => b.rating - a.rating);
+    break;
+  default:
+    if (search)
+      filteredResults.sort(
+        (a, b) => fuzzy(a.title, search, 0.6) - fuzzy(b.title, search, 0.6)
+      );
+    else filteredResults.sort((a, b) => b.rating - a.rating);
 }
 
 const resultsHtml = filteredResults

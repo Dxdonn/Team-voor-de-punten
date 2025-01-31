@@ -593,3 +593,13 @@ function displayPrice(price) {
     style: "currency",
   });
 }
+
+/**
+ * @type {HTMLInputElement}
+ */
+const searchbar = document.getElementById("searchbar");
+searchbar.onkeydown = (event) => {
+  if (event.key === "Enter") {
+    window.location.href = `/product-list.html?search=${searchbar.value}`;
+  }
+};

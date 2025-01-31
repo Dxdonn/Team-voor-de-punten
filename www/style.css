@@ -20,7 +20,6 @@
   max-width: 1000px;
   margin: auto;
   background: white;
-  padding: 10px;
 }
 
 header {
@@ -425,4 +424,9 @@ button {
 
 #footer {
   background-color: #555;
+}
+
+#page {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
