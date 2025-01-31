@@ -280,7 +280,7 @@ li a {
 }
 
 .ownlogoimg{
-  content:url("images/INKS.png");
+  content:url("images/INKSwit.png");
   width: 45%;
 }
 .betaal{
@@ -334,7 +334,7 @@ li a {
 }
 
 .carousel-view .item-list {
-  max-width: 950px;
+  max-width: 1440px;
   width: 70vw;
   padding: 50px 10px;
   display: flex;
