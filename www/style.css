@@ -322,39 +322,59 @@ li a {
 }
 
 .icon-bar a {
-  float: left;
+  float: right;
   text-align: center;
   width: 10%;
-  padding: 12px 0;
+  padding: 12px;
   color: black;
   font-size: 20px;
+  margin-right: auto;
 }
 
 .icon-bar a:hover {
   background-color: #000;
 }
+/* MENU BAR */
+.icon-barfoot {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  color: white;
+  padding: 10px;
+}
+
+.icon-barfoot a {
+  float: right;
+  text-align: center;
+  width: 10%;
+  padding: 12px;
+  color: black;
+  font-size: 20px;
+  margin-right: auto;
+}
 
 .ownlogoimg {
   content: url("images/INKSwit.png");
-  width: 45%;
+  width: 60%;
+
 }
 .betaal {
   content: url("images/Betaalmethoden.png");
   width: 300%;
-  float: relative;
+  position: static;
 }
-.trustpilot {
-  content: url("images/Trustpilot.png");
-  width: 200%;
-  float: left;
+
+.flexbox {
+  display: flex;
 }
+
 /* Style the search box inside the navigation bar */
 .icon-bar input[type="text"] {
-  float: right;
+  float: left;
   padding: 12spx;
   border: none;
   margin-top: 12px;
-  margin-right: 12px;
+  margin-left: 12px;
   font-size: 18px;
 }
 
@@ -365,16 +385,18 @@ li a {
 .text-button {
   border: none;
   cursor: pointer;
+  color: black;
   background: none;
   transition: all 0.3s ease-in-out;
 }
 
 .container {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: white;
 }
 
 .carousel-view {
@@ -388,15 +410,12 @@ li a {
 
 .carousel-view .item-list {
   max-width: 1440px;
-  width: 70vw;
   padding: 50px 10px;
   display: flex;
-  gap: 48px;
+  gap: 70px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  overflow: auto;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
 
@@ -417,10 +436,12 @@ li a {
 .item {
   scroll-snap-align: center;
   min-width: 120px;
-  height: 120px;
+  height: 160px;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
 }
+
+
 
 #footer {
   background-color: #555;
@@ -429,4 +450,8 @@ li a {
 #page {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.header-icon {
+  color: white;
 }
