@@ -18,20 +18,13 @@
   <body style="overflow: scroll" class="content">
     <header>
       <div class="icon-bar">
-        <a href="index.html"><img class="ownlogoimg" /></a>
-        <a href="cart.html"
+        <a href="cart.html" class="Asize"
           ><i class="fa-solid fa-cart-shopping header-icon"></i
         ></a>
-        <a href="product-list.html"
+        <a href="product-list.html" class="Asize"
           ><i class="fa-solid fa-book header-icon"></i
         ></a>
-        <a href="blog.html"
-          ><i class="fa-regular fa-comment header-icon"></i
-        ></a>
-        <a href="#"><i class="fa-regular fa-user header-icon"></i></a>
-        <a href="index.html"
-          ><img class="item" src="images/INKSwit.png" width="auto"
-        /></a>
+        <a href="index.html" class="Asize"><img class="ownlogoimg" /></a>
         <input type="text" placeholder="Search.." id="searchbar" />
       </div>
     </header>
@@ -73,29 +66,38 @@
       </section>
       <section id="results" class="product-list"></section>
     </div>
-    <footer>
-      <div class="icon-barfoot flexbox">
-        <a href="aboutUs.html"></a>
+    <footer class="icon-barfoot">
+      <div class="flexbox">
+        <div style="margin-right: auto">
+          <b>phone:</b> 0612345678 <br />
+          <b>address:</b> Old Utrechtstreet 123 5655GE Utrecht <br />
+          <b>email:</b> info@inks.nl <br />
+          <b>KVK:</b> 08200671 <br />
+        </div>
         <img
-          style="display: block; margin: left 10px; margin-right: auto"
-          src="images/Webshop.png"
-          width="300"
-          float="left;"
-        />
-
-        <img
-          style="margin-right: 10px; margin-left: 860px"
+          style="margin-right: 10px"
           src="images/Thuiswinkel.png"
-          width="100px"
           float="left;"
         />
         <img
-          style="margin-left: auto; margin-right: auto"
-          src="images/Betaalmethoden.png"
-          width="100%"
+          style="
+            display: block;
+            margin-right: 10px;
+            background-color: white;
+            border-radius: 8px;
+            width: 200px;
+            object-fit: contain;
+          "
+          src="images/Webshop.png"
           float="left;"
         />
       </div>
+      <img
+        id="payment-img"
+        src="images/Betaalmethoden.png"
+        width="40%"
+        float="left;"
+      />
       <div class="icon-barfoot"></div>
     </footer>
   </body>
