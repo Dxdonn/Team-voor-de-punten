@@ -365,6 +365,9 @@ li a {
 
 .flexbox {
   display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  height: 100px;
 }
 
 /* Style the search box inside the navigation bar */
@@ -454,4 +457,9 @@ li a {
 
 .header-icon {
   color: white;
+}
+
+#payment-img {
+  float: right;
+  width: 25%;
 }
