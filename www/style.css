@@ -365,6 +365,9 @@ li a {
 
 }
 
+.flexbox {
+  display:flex;
+}
 
 /* Style the search box inside the navigation bar */
 .icon-bar input[type="text"] {
