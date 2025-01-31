@@ -339,6 +339,8 @@ li a {
   width: 100%;
   background-color: #555;
   overflow: auto;
+  color: white;
+  padding: 10px;
 }
 
 .icon-barfoot a {
