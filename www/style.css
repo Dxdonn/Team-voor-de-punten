@@ -323,39 +323,56 @@ li a {
 }
 
 .icon-bar a {
-  float: left;
+  float: right;
   text-align: center;
   width: 10%;
-  padding: 12px 0;
+  padding: 12px ;
   color: black;
   font-size: 20px;
+  margin-right: auto;
 }
 
 .icon-bar a:hover {
   background-color: #000;
 }
+/* MENU BAR */
+.icon-barfoot {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-barfoot a {
+  float: right;
+  text-align: center;
+  width: 10%;
+  padding: 12px ;
+  color: black;
+  font-size: 20px;
+  margin-right: auto;
+}
+
+
 
 .ownlogoimg {
   content: url("images/INKSwit.png");
-  width: 45%;
+  width: 35%;
 }
 .betaal {
   content: url("images/Betaalmethoden.png");
   width: 300%;
-  float: relative;
+  position: static;
+
 }
-.trustpilot {
-  content: url("images/Trustpilot.png");
-  width: 200%;
-  float: left;
-}
+
+
 /* Style the search box inside the navigation bar */
 .icon-bar input[type="text"] {
-  float: right;
+  float: left;
   padding: 12spx;
   border: none;
   margin-top: 12px;
-  margin-right: 12px;
+  margin-left: 12px;
   font-size: 18px;
 }
 
@@ -377,7 +394,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: white;
 }
 
 .carousel-view {
@@ -391,10 +408,10 @@ button {
 
 .carousel-view .item-list {
   max-width: 1440px;
-  width: 70vw;
+  width: 160pxz;
   padding: 50px 10px;
   display: flex;
-  gap: 48px;
+  gap: 70px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none; /* IE and Edge */
@@ -420,7 +437,7 @@ button {
 .item {
   scroll-snap-align: center;
   min-width: 120px;
-  height: 120px;
+  height: 160px;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
 }
