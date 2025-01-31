@@ -356,7 +356,6 @@ li a {
 .ownlogoimg {
   content: url("images/INKSwit.png");
   width: 60%;
-
 }
 .betaal {
   content: url("images/Betaalmethoden.png");
@@ -404,13 +403,12 @@ li a {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 44px 0;
   transition: all 0.25s ease-in;
+  overflow-x: scroll;
 }
 
-.carousel-view .item-list {
+.item-list {
   max-width: 1440px;
-  padding: 50px 10px;
   display: flex;
   gap: 70px;
   scroll-behavior: smooth;
@@ -440,8 +438,6 @@ li a {
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
 }
-
-
 
 #footer {
   background-color: #555;
