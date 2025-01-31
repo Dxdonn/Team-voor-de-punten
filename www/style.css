@@ -362,7 +362,7 @@ li a {
   border: 1px solid #ccc;
 }
 
-button {
+.text-button {
   border: none;
   cursor: pointer;
   background: none;
